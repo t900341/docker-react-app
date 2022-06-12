@@ -1,0 +1,23 @@
+version: "3"
+services:
+  react:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+#    volumes:                          #볼륨을 하면 지금 권한자가 바뀜
+#      - /usr/src/app/node_modules     
+#      - ./:/usr/src/app
+    stdin_open: true
+
+##### 실시간 테스트 내용 #####
+#  tests:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile.dev
+#    volumes:
+#      - /usr/src/app/node_modules
+#      - ./:/usr/src/app
+#    command: ["npm", "run", "test"]
+
