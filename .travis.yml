@@ -12,5 +12,5 @@ before_install:
 script:
   - docker run -e CI=true t900341/docker-react-app npm run test -- --coverage
 
-after_seccess:
+after_success:
   - echo "Test success"
